@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { useState } from 'react'
+import {Work, About, Contact} from './pages'
+
+const PAGES = {
+  work: Work,
+  about: About,
+  contact: Contact
+}
 
 function App() {
+	const [CurrentPage, setCurrentPage] = useState(() => Work)
+
+  const handlePageChange = (e) => {
+    e.preventDefault()
+    setCurrentPage(() => PAGES[e.target.text])
+  }
+	
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="sidebar">
+        <header className="main-header">
+          ZACH<br />
+          RICHARDS
+        </header>
+
+        <ul className="nav">
+          {Object.keys(PAGES).map((page) => (
+            <li>
+              <a href="#" onClick={handlePageChange}>{page}</a>
+            </li>
+          ))}
+            
+        </ul>
+      </div>
+
+      <div className="content">
+				<CurrentPage />
+      </div>
     </div>
   );
 }
 
-export default App;
+export default App
