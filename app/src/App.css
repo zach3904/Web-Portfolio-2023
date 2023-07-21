@@ -1,9 +1,3 @@
-body {
-  background: radial-gradient(circle, var(--color-gray1) 0%, var(--color-gray2) 100%);
-  background: var(--color-gray2);
-  color: lime;
-}
-
 .app {
   height: calc(100vh - 64px);
   padding: 32px;
@@ -11,6 +5,7 @@ body {
   grid-template-columns: min-content 1fr;
   grid-gap: 64px;
   max-width: 1600px;
+  color: var(--color-secondary);
 }
 
 .content {
@@ -23,7 +18,7 @@ body {
   line-height: 90%;
   font-weight: bold;
   letter-spacing: -0.3rem;
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 .nav {
@@ -32,7 +27,7 @@ body {
   padding: 0;
 }
 .nav a {
-  color: var(--color-gray1);
+  color: var(--color-primary);
   text-decoration: none;
   text-transform: capitalize;
 }

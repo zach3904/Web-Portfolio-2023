@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 
 :root {
-  --color-primary: #FF0303;
-  --color-secondary: #4E6E81;
-  --color-gray1: #F9DBBB;
-  --color-gray2: #2E3840;
+  --color-primary: #DCD7C9;
+  --color-secondary: #A27B5C;
+  --color-gray1: #3F4E4F;
+  --color-gray2: #2C3639;
 }
 
 body {
@@ -12,6 +12,7 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(circle, var(--color-gray1) 0%, var(--color-gray2) 100%);
 }
 
 code {
