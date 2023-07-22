@@ -1,8 +1,11 @@
+import './Work.css'
+
 function Work() {
 	return (
-		<div>
-			<h3>Work</h3>
-			<img src="http://placehold.it/800x500" />
+		<div className="work">
+			<ul>
+        <li></li>
+      </ul>
 		</div>
 	)
 }

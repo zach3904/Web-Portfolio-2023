@@ -5,7 +5,7 @@
   grid-template-columns: min-content 1fr;
   grid-gap: 64px;
   max-width: 1600px;
-  color: var(--color-secondary);
+  color: var(--color-gray2);
 }
 
 .content {
@@ -14,20 +14,26 @@
 }
 
 .main-header {
-  font-size: 3.6rem;
+  font-size: 4rem;
   line-height: 90%;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: -0.3rem;
-  color: var(--color-secondary);
+  text-align: right;
 }
 
 .nav {
   list-style-type: none;
-  margin: 0;
+  margin: 24px 0 0;
   padding: 0;
 }
-.nav a {
-  color: var(--color-primary);
+.nav li a {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--color-gray2);
   text-decoration: none;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  text-align: right;
+  width: 100%;
+  padding: 4px 0;
+  font-weight: 500;
 }
