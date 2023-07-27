@@ -1,25 +1,16 @@
-import WebItem from '../components/web-item/web-item'
+import WorkItem from '../components/work-item/work-item'
 import './Work.css'
+import workContent from '../work-content'
 
 function Work() {
 	return (
 		<div className="work">
 			<ul className="work-list">
-        <li>
-          <WebItem />
-        </li>
-        <li>
-          <WebItem />
-        </li>
-        <li>
-          <WebItem />
-        </li>
-        <li>
-          <WebItem />
-        </li>
-        <li>
-          <WebItem />
-        </li>
+        {workContent.map(workItem => (
+          <li>
+            <WorkItem {...workItem} />
+          </li>
+        ))}
       </ul>
 		</div>
 	)
