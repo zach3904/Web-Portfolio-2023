@@ -36,4 +36,8 @@
   width: 100%;
   padding: 4px 0;
   font-weight: 500;
+  transition: color 0.25s;
+}
+.nav li a:hover {
+  color: var(--color-secondary);
 }
