@@ -26,7 +26,7 @@ function App() {
 
         <ul className="nav">
           {Object.keys(PAGES).map((page) => (
-            <li>
+            <li key={page}>
               <a href="#" onClick={handlePageChange}>{page}</a>
             </li>
           ))}
