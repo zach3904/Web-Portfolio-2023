@@ -5,7 +5,6 @@
   grid-template-columns: min-content 1fr;
   grid-gap: 64px;
   max-width: 1600px;
-  color: var(--color-gray2);
 }
 
 .content {
@@ -13,7 +12,7 @@
   justify-content: center;
 }
 
-.main-header {
+.mainHeader {
   font-size: 4rem;
   line-height: 90%;
   font-weight: 700;
@@ -27,17 +26,33 @@
   padding: 0;
 }
 .nav li a {
-  display: block;
-  font-size: 1.4rem;
-  color: var(--color-gray2);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--color-gray3);
   text-decoration: none;
   text-transform: uppercase;
   text-align: right;
   width: 100%;
   padding: 4px 0;
   font-weight: 500;
-  transition: color 0.25s;
+  transition: var(--transition-default);
+}
+.nav li a,
+.nav li a .icon {
+  font-size: 1.4rem;
+}
+.nav li a .icon {
+  opacity: 0;
+  margin-right: 8px;
+  color: var(--color-gray2);
+  transition: var(--transition-default);
+  transform: translateX(-8px);
 }
 .nav li a:hover {
-  color: var(--color-secondary);
+  color: var(--color-primary);
+}
+.nav li a:hover .icon {
+  transform: translateX(0);
+  opacity: 1;
 }

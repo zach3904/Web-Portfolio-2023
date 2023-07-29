@@ -1,11 +1,11 @@
 import WorkItem from '../components/work-item/work-item'
-import './Work.css'
+import styles from './Work.module.css'
 import workContent from '../work-content'
 
 function Work() {
 	return (
-		<div className="work">
-			<ul className="work-list">
+		<div className={styles.work}>
+			<ul className={styles.workList}>
         {workContent.map(workItem => (
           <li>
             <WorkItem {...workItem} />

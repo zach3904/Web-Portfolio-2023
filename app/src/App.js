@@ -1,4 +1,4 @@
-import './App.css'
+import styles from './App.module.css'
 import { useState } from 'react'
 import {Work, About, Contact} from './pages'
 
@@ -17,24 +17,27 @@ function App() {
   }
 	
   return (
-    <div className="app">
-      <div className="sidebar">
-        <header className="main-header">
-          ZACH<br />
-          RICHARDS
-        </header>
-
-        <ul className="nav">
-          {Object.keys(PAGES).map((page) => (
-            <li key={page}>
-              <a href="#" onClick={handlePageChange}>{page}</a>
+    <div className={styles.app}>
+      <div className={styles.sidebar}>
+        <div>
+          <header className={styles.mainHeader}>
+            ZACH<br />
+            RICHARDS
+          </header>
+          <ul className={styles.nav}>
+            {Object.keys(PAGES).map((page) => (
+              <li key={page}>
+                <a href="#" onClick={handlePageChange}>{page}</a>
+              </li>
+            ))}
+            <li>
+              <a href="http://zrichards.photography" target="_blank"><span className={`material-icons ${styles.icon}`}>open_in_new</span> Photography</a>
             </li>
-          ))}
-            
-        </ul>
+          </ul>
+        </div>
       </div>
 
-      <div className="content">
+      <div className={styles.content}>
 				<CurrentPage />
       </div>
     </div>

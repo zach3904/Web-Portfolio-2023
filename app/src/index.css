@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap');
 
 :root {
-  --color-primary: #DCD7C9;
-  --color-secondary: #A27B5C;
+  --color-primary: #FF6B6B;
+  --color-secondary: #1985A1;
   --color-gray1: #fbfbfb;
-  --color-gray2: #2C3639;
+  --color-gray2: #C5C3C6;
+  --color-gray3: #46494C;
+  --color-gray4: #2C3639;
+
+  --transition-default: all 0.25s;
 }
 
 html {
@@ -18,9 +22,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-gray1);
   font-size: 1.4rem;
+  color: var(--color-gray4);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+img {
+  max-width: 100%;
 }
