@@ -3,3 +3,19 @@
   padding: 0;
   margin: 0;
 }
+
+.workList li {
+  height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+}
+
+.workList h2 {
+  position: absolute;
+  top: 100px;
+  margin: 0;
+  right: -150px;
+  font-weight: 300;
+  font-size: 3.2rem;
+  transform: rotate(90deg);
+}

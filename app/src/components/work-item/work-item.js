@@ -5,7 +5,7 @@ function WorkItem(props) {
   
   return (
     <div className={styles.workItem}>
-      <h4>{title}</h4>
+      <h2>{title}</h2>
       <img src={`${process.env.PUBLIC_URL}/images/designs/${imgFolder}/${images[0]}`} />
     </div>
   )

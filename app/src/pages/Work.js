@@ -4,15 +4,13 @@ import workContent from '../work-content'
 
 function Work() {
 	return (
-		<div className={styles.work}>
-			<ul className={styles.workList}>
-        {workContent.map(workItem => (
-          <li>
-            <WorkItem {...workItem} />
-          </li>
-        ))}
-      </ul>
-		</div>
+    <ul className={styles.workList}>
+      {workContent.map(workItem => (
+        <li>
+          <WorkItem {...workItem} />
+        </li>
+      ))}
+    </ul>
 	)
 }
 

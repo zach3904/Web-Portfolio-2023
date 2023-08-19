@@ -19,7 +19,7 @@ function App() {
   return (
     <div className={styles.app}>
       <div className={styles.sidebar}>
-        <div>
+        <div className={styles.sidebarContainer}>
           <header className={styles.mainHeader}>
             ZACH<br />
             RICHARDS
