@@ -116,7 +116,7 @@ export default [
     ]
   },
   {
-    "title": "Pagliacci Pizza - Mobile Site",
+    "title": "Pagliacci Pizza - Mobile",
     "url": "http://www.pagliacci.com/",
     "imgFolder": "pagliacci",
     "images": [
@@ -173,7 +173,7 @@ export default [
     ]
   },
   {
-    "title": "Sizzling Platter Corporate Brands",
+    "title": "Sizzling Platter Brands",
     "url": "http://www.sizzlingplatter.com",
     "imgFolder": "splatbrand",
     "images": [

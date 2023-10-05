@@ -1,3 +1,18 @@
 .workItem {
   position: relative;
 }
+.workItem img {
+  box-shadow: 0px 0px 80px -16px rgba(0,0,0,0.15);
+}
+
+.workItem h2 {
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  margin: 0;
+  font-weight: 300;
+  font-size: 3.6rem;
+  transform: rotate(90deg);
+  transform-origin: left bottom;
+  width: max-content;
+}

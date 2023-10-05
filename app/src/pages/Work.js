@@ -6,7 +6,7 @@ function Work() {
 	return (
     <ul className={styles.workList}>
       {workContent.map(workItem => (
-        <li>
+        <li key={workItem.title}>
           <WorkItem {...workItem} />
         </li>
       ))}
