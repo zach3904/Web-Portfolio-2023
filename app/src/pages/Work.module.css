@@ -3,9 +3,35 @@
   padding: 0;
   margin: 0;
 }
-
 .workList li {
   height: calc(100vh - 64px);
   display: flex;
   align-items: center;
+  padding-right: 48px;
+}
+
+.prevNextArrows {
+  position: fixed;
+  bottom: 24px;
+  right: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.prevNextArrows a {
+  color: var(--color-gray3);
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0.6;
+  transition: var(--transition-default);
+}
+.prevNextArrows a:hover {
+  opacity: 1;
+  color: var(--color-primary);
+}
+.prevNextIcons {
+  font-size: 4.2rem;
 }
