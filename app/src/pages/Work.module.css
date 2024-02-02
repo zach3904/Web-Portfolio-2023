@@ -27,10 +27,16 @@
   overflow: hidden;
   opacity: 0.6;
   transition: var(--transition-default);
+  cursor: pointer;
 }
 .prevNextArrows a:hover {
   opacity: 1;
   color: var(--color-primary);
+}
+.prevNextArrows a[disabled] {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.2;
 }
 .prevNextIcons {
   font-size: 4.2rem;
