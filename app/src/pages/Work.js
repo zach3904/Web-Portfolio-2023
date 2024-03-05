@@ -33,6 +33,10 @@ function Work() {
     // add up/down key listener
   }, [])
 
+  useEffect(() => {
+    // update currentSlide while manually scrolling
+  }, [])
+
 	return (
     <>
       <ul className={styles.workList}>
