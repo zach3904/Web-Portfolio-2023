@@ -3,14 +3,19 @@ import styles from './styles.module.css'
 import { Waypoint } from 'react-waypoint'
 
 function WorkItem(props) {
-  const {imgFolder, images, title, description, skills} = props
+  const {
+    imgFolder,
+    images,
+    title,
+    setCurrentSlide,
+    slideNumber
+  } = props
   const [showTitle, setShowTitle] = React.useState(false)
   
   return (
     <div className={styles.workItem}>
       <Waypoint
-        onEnter={({ previousPosition, currentPosition }) => console.log(`enter - ${title} - ${currentPosition}`)}
-        onLeave={({ previousPosition, currentPosition }) => console.log(`leave - ${title} - ${currentPosition}`)}
+        onEnter={() => setCurrentSlide(slideNumber)}
         topOffset="30%"
         bottomOffset="30%"
       >

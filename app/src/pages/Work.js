@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import WorkItem from '../components/work-item/work-item'
 import styles from './Work.module.css'
 import workContent from '../work-content'
-import { scroller, smooth } from 'react-scroll'
+import { scroller } from 'react-scroll'
 
 function Work() {
   // add linkability to slides with icon, but dont add to history when scrolling
@@ -31,18 +31,24 @@ function Work() {
 
   useEffect(() => {
     // add up/down key listener
-  }, [])
+    console.log(currentSlide)
+  }, [currentSlide])
 
 	return (
     <>
       <ul className={styles.workList}>
-        {workContent.map(workItem => (
+        {workContent.map((workItem, i) => (
           <li key={workItem.title} name={workItem.title}>
-            <WorkItem {...workItem} />
+            <WorkItem
+              {...workItem}
+              setCurrentSlide={setCurrentSlide}
+              slideNumber={i}
+            />
           </li>
         ))}
       </ul>
       <div className={styles.prevNextArrows}>
+        <div><span>{currentSlide}</span> / <span>{workContent.length}</span></div>
         <a onClick={() => onChangeSlide('up')} disabled={currentSlide === 0}>
           <span className={`${styles.prevNextIcons} material-icons`}>keyboard_arrow_up</span>
         </a>
