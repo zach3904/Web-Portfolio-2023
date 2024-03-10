@@ -31,13 +31,8 @@ function Work() {
 
   useEffect(() => {
     // add up/down key listener
-    console.log(currentSlide)
   }, [currentSlide])
-
-  useEffect(() => {
-    // update currentSlide while manually scrolling
-  }, [])
-
+  
 	return (
     <>
       <ul className={styles.workList}>
@@ -52,7 +47,7 @@ function Work() {
         ))}
       </ul>
       <div className={styles.prevNextArrows}>
-        <div><span>{currentSlide}</span> / <span>{workContent.length}</span></div>
+        <div><span>{currentSlide + 1}</span> / <span>{workContent.length}</span></div>
         <a onClick={() => onChangeSlide('up')} disabled={currentSlide === 0}>
           <span className={`${styles.prevNextIcons} material-icons`}>keyboard_arrow_up</span>
         </a>
