@@ -34,6 +34,10 @@ function Work() {
     console.log(currentSlide)
   }, [currentSlide])
 
+  useEffect(() => {
+    // update currentSlide while manually scrolling
+  }, [])
+
 	return (
     <>
       <ul className={styles.workList}>
