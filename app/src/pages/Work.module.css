@@ -33,7 +33,7 @@
   opacity: 1;
   color: var(--color-primary);
 }
-.prevNextArrows a[disabled] {
+.prevNextArrows a.disabled {
   pointer-events: none;
   cursor: default;
   opacity: 0.2;
