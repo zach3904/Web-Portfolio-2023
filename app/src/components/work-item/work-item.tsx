@@ -2,13 +2,23 @@ import React from 'react'
 import styles from './styles.module.css'
 import { Waypoint } from 'react-waypoint'
 
-function WorkItem(props) {
+type WorkItemProps = {
+  imgFolder: string,
+  images: Array<string>,
+  title: string,
+  setCurrentSlide: (slideNumber: number) => void,
+  slideNumber: number,
+  description: string,
+}
+
+function WorkItem(props: WorkItemProps) {
   const {
     imgFolder,
     images,
     title,
     setCurrentSlide,
-    slideNumber
+    slideNumber,
+    description
   } = props
   const [showTitle, setShowTitle] = React.useState(false)
   
@@ -22,6 +32,7 @@ function WorkItem(props) {
         <div>
           <h2>{title}</h2>
           <img src={`${process.env.PUBLIC_URL}/images/designs/${imgFolder}/${images[0]}`} />
+          <p>{description}</p>
         </div>
       </Waypoint>
     </div>
