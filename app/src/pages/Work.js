@@ -3,6 +3,7 @@ import WorkItem from '../components/work-item/work-item'
 import styles from './Work.module.css'
 import workContent from '../work-content'
 import { scroller } from 'react-scroll'
+import Fade from '../components/animations/fade'
 
 function Work() {
   // add linkability to slides with icon, but dont add to history when scrolling
@@ -16,6 +17,8 @@ function Work() {
       nextSlide = currentSlide - 1
     } else if (direction === 'down') {
       nextSlide = currentSlide + 1
+    } else if (direction === 'top') {
+      nextSlide = 0
     } else {
       return false
     }
@@ -51,9 +54,16 @@ function Work() {
         <a onClick={() => onChangeSlide('up')} disabled={currentSlide === 0}>
           <span className={`${styles.prevNextIcons} material-icons`}>keyboard_arrow_up</span>
         </a>
+
         <a onClick={() => onChangeSlide('down')} disabled={currentSlide >= workContent.length - 1}>
           <span className={`${styles.prevNextIcons} material-icons`}>keyboard_arrow_down</span>
         </a>
+
+        <Fade >
+          <a onClick={() => onChangeSlide('top')}>
+            <div className={styles.backToTop}>Back to <span>TOP</span></div>
+          </a>
+        </Fade>
       </div>
     </>
 	)

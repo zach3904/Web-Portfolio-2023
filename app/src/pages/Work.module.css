@@ -20,7 +20,9 @@
 }
 .prevNextArrows a {
   color: var(--color-gray3);
-  height: 24px;
+  height: 28px;
+  width: 42px;
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -40,4 +42,15 @@
 }
 .prevNextIcons {
   font-size: 4.2rem;
+}
+.backToTop {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  font-size: 1.1rem;
+  align-items: center;
+}
+.backToTop > span {
+  font-size: 1.6rem;
+  margin-top: -8px;
 }
