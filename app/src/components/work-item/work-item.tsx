@@ -23,7 +23,7 @@ function WorkItem(props: WorkItemProps) {
   const [showTitle, setShowTitle] = React.useState(false)
   
   return (
-    <div className={styles.workItem}>y
+    <div className={styles.workItem}>
       <Waypoint
         onEnter={() => setCurrentSlide(slideNumber)}
         topOffset="30%"
