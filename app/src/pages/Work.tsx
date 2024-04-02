@@ -4,6 +4,7 @@ import styles from './Work.module.css'
 import workContent from '../work-content'
 import { Element, scroller } from 'react-scroll'
 import clsx from 'clsx'
+import Fade from '../components/animations/fade'
 
 function Work() {
   // add linkability to slides with icon, but dont add to history when scrolling
@@ -14,11 +15,11 @@ function Work() {
     let nextSlide
     
     if (direction === 'up' && currentSlide > 1) {
-      console.log('up')
       nextSlide = currentSlide - 1
     } else if (direction === 'down' && currentSlide < workContent.length - 1) {
-      console.log('down')
       nextSlide = currentSlide + 1
+    } else if (direction === 'top') {
+      nextSlide = 0
     } else {
       return false
     }
@@ -77,6 +78,7 @@ function Work() {
         >
           <span className={`${styles.prevNextIcons} material-icons`}>keyboard_arrow_up</span>
         </a>
+
         <a
           onClick={() => handleChangeSlide('down')}
           className={clsx({
@@ -86,6 +88,12 @@ function Work() {
         >
           <span className={`${styles.prevNextIcons} material-icons`}>keyboard_arrow_down</span>
         </a>
+
+        <Fade>
+          <a onClick={() => handleChangeSlide('top')}>
+            <div className={styles.backToTop}>Back to <span>TOP</span></div>
+          </a>
+        </Fade>
       </div>
     </>
 	)
