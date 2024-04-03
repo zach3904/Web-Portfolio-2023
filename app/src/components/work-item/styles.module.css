@@ -1,11 +1,11 @@
 .workItem {
   position: relative;
 }
-.workItem img {
+.imgViewer {
   box-shadow: 0px 0px 80px -16px rgba(0,0,0,0.15);
 }
 
-.workItem h2 {
+.title {
   position: absolute;
   bottom: 100%;
   left: 100%;
@@ -15,4 +15,8 @@
   transform: rotate(90deg);
   transform-origin: left bottom;
   width: max-content;
+}
+
+.description {
+  position: absolute;
 }

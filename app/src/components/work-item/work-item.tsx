@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styles from './styles.module.css'
 import { Waypoint } from 'react-waypoint'
-import Fade from '../animations/fade'
 
 type WorkItemProps = {
   imgFolder: string,
@@ -23,21 +22,19 @@ function WorkItem(props: WorkItemProps) {
   } = props
   
   return (
-    <div className={styles.workItem}>
-      <Waypoint
-        onEnter={() => {
-          setCurrentSlide(slideNumber)
-        }}
-        topOffset="30%"
-        bottomOffset="30%"
-      >
-        <div>
-          <h2>{title}</h2>
-          <img src={`${process.env.PUBLIC_URL}/images/designs/${imgFolder}/${images[0]}`} />
-          <p>{description}</p>
-        </div>
-      </Waypoint>
-    </div>
+    <Waypoint
+      onEnter={() => {
+        setCurrentSlide(slideNumber)
+      }}
+      topOffset="30%"
+      bottomOffset="30%"
+    >
+      <div className={styles.workItem}>
+        <h2 className={styles.title}>{title}</h2>
+        <img className={styles.imgViewer} src={`${process.env.PUBLIC_URL}/images/designs/${imgFolder}/${images[0]}`} />
+        <p className={styles.description}>{description}</p>
+      </div>
+    </Waypoint>
   )
 }
 

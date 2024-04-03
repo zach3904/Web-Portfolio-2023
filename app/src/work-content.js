@@ -122,7 +122,7 @@ export default [
     "images": [
       "pagliacci-1.jpg",
     ],
-    "description": "Getting to work for one of Seattle's favorite pizza places was quite an honor! I was given a simple requirement list and told to have fun with it.  It was my first start-to-finish project using jQuery Mobile. It all came together smoothly and the client was very happy with the result! Winning.Getting to work for one of Seattle's favorite pizza places was quite an honor! I was given a simple requirement list and told to have fun with it.  It was my first start-to-finish project using jQuery Mobile. It all came together smoothly and the client was very happy with the result! Winning.Getting to work for one of Seattle's favorite pizza places was quite an honor! I was given a simple requirement list and told to have fun with it.  It was my first start-to-finish project using jQuery Mobile. It all came together smoothly and the client was very happy with the result! Winning.",
+    "description": "Getting to work for one of Seattle's favorite pizza places was quite an honor! I was given a simple requirement list and told to have fun with it.  It was my first start-to-finish project using jQuery Mobile. It all came together smoothly and the client was very happy with the result!",
     "skills": [
       "Design",
       "jQuery Mobile",

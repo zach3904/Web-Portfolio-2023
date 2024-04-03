@@ -26,7 +26,7 @@ function Work() {
         smooth: 'easeInOutQuint',
         delay: 25,
         offset: -32,
-        duration: 500
+        duration: 350
       })
     }
 
