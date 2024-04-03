@@ -1,20 +1,36 @@
-import Animate from 'react-smooth'
+import { useState, useEffect } from 'react'
+import styles from './fade.module.css'
 
 type FadeProps = {
   children: React.ReactNode,
   duration?: number,
-  isFadeOut?: boolean,
+  show?: boolean,
 }
 
 const Fade = ({
   children,
   duration = 250,
-  isFadeOut,
+  show,
 }: FadeProps) => {
-  return (
-    <Animate from={isFadeOut ? 1 : 0} to={isFadeOut ? 0 : 1} attributeName="opacity" duration={duration}>
+  const [renderChildren, setRenderChildren] = useState(show)
+
+  useEffect(() => {
+    if (show) {
+      setRenderChildren(true)
+    }
+  }, [show])
+  
+  const handleAnimationEnd = () => {
+    if (!show) setRenderChildren(false)
+  }
+  
+  return renderChildren && (
+    <div
+      style={{ animation: `${show ? 'fadeIn' : 'fadeOut'} ${duration}ms`}}
+      onAnimationEnd={handleAnimationEnd}
+    >
       {children}
-    </Animate>
+    </div>
   )
 }
 

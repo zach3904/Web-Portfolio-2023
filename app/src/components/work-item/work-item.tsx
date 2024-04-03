@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './styles.module.css'
 import { Waypoint } from 'react-waypoint'
+import Fade from '../animations/fade'
 
 type WorkItemProps = {
   imgFolder: string,
@@ -20,12 +21,13 @@ function WorkItem(props: WorkItemProps) {
     slideNumber,
     description
   } = props
-  const [showTitle, setShowTitle] = React.useState(false)
   
   return (
     <div className={styles.workItem}>
       <Waypoint
-        onEnter={() => setCurrentSlide(slideNumber)}
+        onEnter={() => {
+          setCurrentSlide(slideNumber)
+        }}
         topOffset="30%"
         bottomOffset="30%"
       >
