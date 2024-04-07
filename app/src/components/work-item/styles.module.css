@@ -1,5 +1,7 @@
 .workItem {
   position: relative;
+  max-width: 800px;
+  width: 100%;
 }
 .imgViewer {
   box-shadow: 0px 0px 80px -16px rgba(0,0,0,0.15);
@@ -18,5 +20,37 @@
 }
 
 .description {
-  position: absolute;
+  font-size: 1.4rem;
+  margin-top: 32px;
+}
+
+.skillsList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 4px;
+}
+.skill {
+  font-size: 1rem;
+  color: white;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  background-color: var(--color-primary);
+  border-radius: 99px;
+}
+
+swiper-container {
+  --swiper-theme-color: var(--color-secondary);
+  --swiper-navigation-size: 22px;
+  --swiper-pagination-bottom: 0px;
+}
+swiper-container::part(container) {
+  padding-bottom: 32px;
+}
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  margin-top: calc(0px - var(--swiper-navigation-size));
+  top: 100%;
+  z-index: 11;
 }

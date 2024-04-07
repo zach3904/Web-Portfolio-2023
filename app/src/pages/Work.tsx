@@ -21,33 +21,24 @@ function Work() {
       nextSlide = 0
     }
 
-    if (nextSlide) {
+    if (workContent[nextSlide]) {
       scroller.scrollTo(workContent[nextSlide].title, {
         smooth: 'easeInOutQuint',
-        delay: 25,
-        offset: -32,
-        duration: 350
+        delay: 15,
+        // offset: -32,
+        duration: 150
       })
     }
-
-    // setCurrentSlide(nextSlide)
   }
 
   useEffect(() => {
     const handleArrowKeys = event => {
-      switch (event.key) {
-        case 'ArrowUp':
-          event.preventDefault()
-          handleChangeSlide('up')
-          break
-
-        case 'ArrowDown':
-          event.preventDefault()
-          handleChangeSlide('down')
-          break
-
-        default:
-          break
+      if (event.key === 'ArrowUp') {
+        event.preventDefault()
+        handleChangeSlide('up')
+      } else if (event.key === 'ArrowDown') {
+        event.preventDefault()
+        handleChangeSlide('down')
       }
     }
 
@@ -60,19 +51,18 @@ function Work() {
   
 	return (
     <>
-      <ul className={styles.workList}>
+      <div className={styles.workList}>
         {workContent.map((workItem, i) => (
-          <Element name={workItem.title}>
-            <li key={workItem.title} >
-              <WorkItem
-                {...workItem}
-                setCurrentSlide={setCurrentSlide}
-                slideNumber={i}
-              />
-            </li>
+          <Element name={workItem.title} key={workItem.title}>
+            <WorkItem
+              {...workItem}
+              currentSlide={currentSlide}
+              setCurrentSlide={setCurrentSlide}
+              slideNumber={i}
+            />
           </Element>
         ))}
-      </ul>
+      </div>
       <div className={styles.prevNextArrows}>
         <div><span>{currentSlide + 1}</span> / <span>{workContent.length}</span></div>
         <div className={styles.prevNextArrow}>

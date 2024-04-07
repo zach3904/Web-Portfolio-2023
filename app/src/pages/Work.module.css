@@ -1,9 +1,10 @@
 .workList {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 24px;
 }
-.workList li {
+.workList > div {
   height: calc(100vh - 64px);
   display: flex;
   align-items: center;
@@ -11,9 +12,11 @@
 }
 
 .prevNextArrows {
+  -webkit-user-select: none;
+  user-select: none;
   position: fixed;
   bottom: 24px;
-  right: 32px;
+  right: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
