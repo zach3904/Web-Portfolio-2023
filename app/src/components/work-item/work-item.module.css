@@ -21,7 +21,7 @@
 
 .description {
   font-size: 1.4rem;
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .skillsList {
@@ -42,8 +42,12 @@
 
 swiper-container {
   --swiper-theme-color: var(--color-secondary);
-  --swiper-navigation-size: 22px;
+  --swiper-navigation-size: 20px;
   --swiper-pagination-bottom: 0px;
+  --swiper-pagination-bullet-width: 4px;
+  --swiper-pagination-bullet-height: 4px;
+  --swiper-pagination-bullet-horizontal-gap: 2px;
+  --swiper-pagination-bullet-border-radius: 0;
 }
 swiper-container::part(container) {
   padding-bottom: 32px;
@@ -53,4 +57,7 @@ swiper-container::part(button-next) {
   margin-top: calc(0px - var(--swiper-navigation-size));
   top: 100%;
   z-index: 11;
+}
+swiper-container::part(pagination) {
+  height: 24px;
 }

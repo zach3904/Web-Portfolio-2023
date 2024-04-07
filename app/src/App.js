@@ -3,13 +3,13 @@ import { useState } from 'react'
 import {Work, About, Contact} from './pages'
 
 const PAGES = {
-  work: Work,
   about: About,
+  work: Work,
   contact: Contact
 }
 
 function App() {
-	const [CurrentPage, setCurrentPage] = useState(() => Work)
+	const [CurrentPage, setCurrentPage] = useState(() => About)
 
   const handlePageChange = (e) => {
     e.preventDefault()

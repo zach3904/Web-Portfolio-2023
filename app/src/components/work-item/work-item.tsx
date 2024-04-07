@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import styles from './styles.module.css'
+import styles from './work-item.module.css'
 import { Waypoint } from 'react-waypoint'
 
 type WorkItemProps = {
