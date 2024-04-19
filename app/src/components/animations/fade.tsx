@@ -5,12 +5,14 @@ type FadeProps = {
   children: React.ReactNode,
   duration?: number,
   show?: boolean,
+  onAnimationEnd?: () => {}
 }
 
 const Fade = ({
   children,
   duration = 250,
   show,
+  onAnimationEnd,
 }: FadeProps) => {
   const [renderChildren, setRenderChildren] = useState(show)
 
@@ -21,8 +23,11 @@ const Fade = ({
   }, [show])
   
   const handleAnimationEnd = () => {
+    if (onAnimationEnd) onAnimationEnd()
     if (!show) setRenderChildren(false)
   }
+
+  console.log(renderChildren)
   
   return renderChildren && (
     <div

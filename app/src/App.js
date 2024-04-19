@@ -1,18 +1,22 @@
 import styles from './App.module.css'
 import { useState } from 'react'
 import {Work, About, Contact} from './pages'
+import clsx from 'clsx'
+import Fade from './components/animations/fade'
 
 const PAGES = {
-  about: About,
   work: Work,
+  about: About,
   contact: Contact
 }
 
 function App() {
 	const [CurrentPage, setCurrentPage] = useState(() => About)
+  const [NextPage, setNextPage] = useState(() => About)
 
   const handlePageChange = (e) => {
     e.preventDefault()
+
     setCurrentPage(() => PAGES[e.target.text])
   }
 	
@@ -38,7 +42,12 @@ function App() {
       </div>
 
       <div className={styles.content}>
-				<CurrentPage />
+        <Fade show={CurrentPage === NextPage}>
+				  <CurrentPage />
+        </Fade>
+        <Fade show={CurrentPage !== NextPage}>
+				  <NextPage />
+        </Fade>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import styles from './About.module.css'
 function About() {
 	return (
 		<div className={styles.container}>
-			<div>
+			<div style={{width: '320px'}}>
 				<img src="/images/self-portrait.jpg" className={styles.portrait} />
 			</div>
 			<div className={styles.content}>
