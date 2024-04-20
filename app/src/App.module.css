@@ -11,7 +11,11 @@
 .content {
   display: flex;
   justify-content: center;
-  transition: 'opacity 0.25s';
+  transition: opacity 0.2s;
+  opacity: 1;
+}
+.fadeOut {
+  opacity: 0
 }
 
 .sidebarContainer {

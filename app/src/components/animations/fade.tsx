@@ -26,8 +26,6 @@ const Fade = ({
     if (onAnimationEnd) onAnimationEnd()
     if (!show) setRenderChildren(false)
   }
-
-  console.log(renderChildren)
   
   return renderChildren && (
     <div

@@ -2,7 +2,6 @@ import styles from './App.module.css'
 import { useState } from 'react'
 import {Work, About, Contact} from './pages'
 import clsx from 'clsx'
-import Fade from './components/animations/fade'
 
 const PAGES = {
   work: Work,
@@ -11,14 +10,18 @@ const PAGES = {
 }
 
 function App() {
-	const [CurrentPage, setCurrentPage] = useState(() => About)
-  const [NextPage, setNextPage] = useState(() => About)
+	const [CurrentPage, setCurrentPage] = useState(() => PAGES['work'])
+  const [nextPage, setNextPage] = useState('work')
 
-  const handlePageChange = (e) => {
+  const startPageChange = (e) => {
     e.preventDefault()
-
-    setCurrentPage(() => PAGES[e.target.text])
+    setNextPage(e.target.text)
   }
+
+  const contentClasses = clsx({
+    [styles.content]: true,
+    [styles.fadeOut]: CurrentPage.name.toLowerCase() !== nextPage
+  })
 	
   return (
     <div className={styles.app}>
@@ -31,7 +34,7 @@ function App() {
           <ul className={styles.nav}>
             {Object.keys(PAGES).map((page) => (
               <li key={page}>
-                <a href="#" onClick={handlePageChange}>{page}</a>
+                <a href="#" onClick={startPageChange}>{page}</a>
               </li>
             ))}
             <li>
@@ -41,13 +44,8 @@ function App() {
         </div>
       </div>
 
-      <div className={styles.content}>
-        <Fade show={CurrentPage === NextPage}>
-				  <CurrentPage />
-        </Fade>
-        <Fade show={CurrentPage !== NextPage}>
-				  <NextPage />
-        </Fade>
+      <div className={contentClasses} onTransitionEnd={() => setCurrentPage(() => PAGES[nextPage])}>
+        <CurrentPage />
       </div>
     </div>
   );
