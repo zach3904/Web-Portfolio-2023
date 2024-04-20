@@ -36,8 +36,8 @@
   color: white;
   padding: 2px 8px;
   text-transform: uppercase;
-  background-color: var(--color-primary);
-  border-radius: 99px;
+  background-color: var(--color-gray3);
+  box-shadow: 4px 4px 0 var(--color-primary);
 }
 
 swiper-container {

@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import styles from './fade.module.css'
 
 type FadeProps = {
   children: React.ReactNode,

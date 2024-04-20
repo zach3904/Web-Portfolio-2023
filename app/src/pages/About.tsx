@@ -3,8 +3,8 @@ import styles from './About.module.css'
 function About() {
 	return (
 		<div className={styles.container}>
-			<div style={{width: '320px'}}>
-				<img src="/images/self-portrait.jpg" className={styles.portrait} />
+			<div className={styles.portraitContainer}>
+				<img src="/images/self-portrait.jpg" className={styles.portrait} alt="Zach Richards portrait" />
 			</div>
 			<div className={styles.content}>
 				<h2 className={styles.title}>75% developer. 25% designer.</h2>
