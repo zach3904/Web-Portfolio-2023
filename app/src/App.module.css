@@ -53,17 +53,18 @@
 .nav li a .icon {
   font-size: 1.4rem;
 }
-.nav li a .icon {
-  opacity: 0;
-  margin-right: 8px;
-  color: var(--color-gray2);
-  transition: var(--transition-default);
-  transform: translateX(-8px);
-}
 .nav li a:hover {
   color: var(--color-primary);
 }
-.nav li a:hover .icon {
-  transform: translateX(0);
-  opacity: 1;
+
+.secondaryLinks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.secondaryLinks a {
+  color: var(--color-gray2);
+  height: 24px;
+  width: 24px;
+  display: block;
 }

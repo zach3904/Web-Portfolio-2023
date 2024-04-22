@@ -3,6 +3,8 @@ import { useState } from 'react'
 import {Work, About, Contact} from './pages'
 import clsx from 'clsx'
 import LinkedInIcon from './components/icons/linkedin-icon'
+import GithubIcon from './components/icons/github-icon'
+import CameraIcon from './components/icons/camera-icon'
 
 const PAGES = {
   work: Work,
@@ -19,7 +21,7 @@ function App() {
   const startPageChange = (e) => {
     e.preventDefault()
     const pageName = e.target.text
-    router.replace(`/${pageName}`)
+    // router.replace(`/${pageName}`)
     setNextPage(pageName)
   }
 
@@ -46,10 +48,16 @@ function App() {
             {/* <li>
               <a href="http://zrichards.photography" target="_blank"><span className={`material-icons ${styles.icon}`}>open_in_new</span> Photography</a>
             </li> */}
-            <div className={styles.navIcons}>
-              <LinkedInIcon /> LinkedIn
-              Github
-              Photography
+            <div className={styles.secondaryLinks}>
+              <a href="#">
+                <LinkedInIcon />
+              </a>
+              <a href="#">
+                <GithubIcon />
+              </a>
+              <a href="http://zrichards.photography" target="_blank">
+                <CameraIcon />
+              </a>
             </div>
           </ul>
         </div>
