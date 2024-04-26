@@ -13,22 +13,25 @@ const PAGES = {
 }
 
 function App() {
-  // const pathname = window.location.pathname
+  const pathname = window.location.pathname.split('/')[1]
 
-	const [CurrentPage, setCurrentPage] = useState(() => PAGES['work'])
-  const [nextPage, setNextPage] = useState('work')
-
+	const [currentPage, setCurrentPage] = useState(() => pathname)
+  const [nextPage, setNextPage] = useState(pathname)
+  
   const startPageChange = (e) => {
     e.preventDefault()
     const pageName = e.target.text
-    // router.replace(`/${pageName}`)
+    
+    // TODO: update url somehow. Or maybe switch to #pageName.
     setNextPage(pageName)
   }
 
   const contentClasses = clsx({
     [styles.content]: true,
-    [styles.fadeOut]: CurrentPage.name.toLowerCase() !== nextPage
+    [styles.fadeOut]: currentPage.toLowerCase() !== nextPage
   })
+
+  const CurrentPageComponent = PAGES[currentPage]
 	
   return (
     <div className={styles.app}>
@@ -65,8 +68,8 @@ function App() {
         </div>
       </div>
 
-      <div className={contentClasses} onTransitionEnd={() => setCurrentPage(() => PAGES[nextPage])}>
-        <CurrentPage />
+      <div className={contentClasses} onTransitionEnd={() => setCurrentPage(nextPage)}>
+        <CurrentPageComponent />
       </div>
     </div>
   );

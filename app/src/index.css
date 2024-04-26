@@ -30,6 +30,16 @@ code {
     monospace;
 }
 
+a,
+a:active,
+a:visited {
+  color: var(--color-secondary);
+  transition: var(--transition-default);
+}
+a:hover {
+  color: var(--color-gray2)
+}
+
 img {
   max-width: 100%;
 }
