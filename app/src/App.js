@@ -44,22 +44,24 @@ function App() {
                 <a href={`#${page}`} onClick={startPageChange}>{page}</a>
               </li>
             ))}
-
-            {/* <li>
-              <a href="http://zrichards.photography" target="_blank"><span className={`material-icons ${styles.icon}`}>open_in_new</span> Photography</a>
-            </li> */}
-            <div className={styles.secondaryLinks}>
-              <a href="#">
+          </ul>
+          <div className={styles.secondaryLinks}>
+            <div className={styles.secondaryLinkContainer}>
+              <a href="http://www.linkedin.com/in/zachary-richards-94a04720">
                 <LinkedInIcon />
               </a>
-              <a href="#">
+            </div>
+            <div className={styles.secondaryLinkContainer}>
+              <a href="https://github.com/zach3904/Web-Portfolio-2023" target="_blank">
                 <GithubIcon />
               </a>
+            </div>
+            <div className={styles.secondaryLinkContainer}>
               <a href="http://zrichards.photography" target="_blank">
                 <CameraIcon />
               </a>
             </div>
-          </ul>
+          </div>
         </div>
       </div>
 
