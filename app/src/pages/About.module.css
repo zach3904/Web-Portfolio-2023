@@ -17,3 +17,12 @@
 .content {
   flex: 3;
 }
+.bio {
+  font-size: clamp(1.2rem, 1vw, 1.6rem);
+}
+
+@media screen and (max-width: 960px) {
+  .content {
+    flex: 2;
+  }
+}

@@ -13,10 +13,8 @@ const PAGES = {
 }
 
 function App() {
-  const pathname = window.location.pathname.split('/')[1]
-
-	const [currentPage, setCurrentPage] = useState(() => pathname)
-  const [nextPage, setNextPage] = useState(pathname)
+	const [currentPage, setCurrentPage] = useState(() => 'work')
+  const [nextPage, setNextPage] = useState('work')
   
   const startPageChange = (e) => {
     e.preventDefault()
