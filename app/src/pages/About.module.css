@@ -1,7 +1,4 @@
-.container {
-  display: flex;
-  gap: 48px;
-}
+.container {}
 .portraitContainer {
   flex: 1;
 }
