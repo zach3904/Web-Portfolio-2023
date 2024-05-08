@@ -18,8 +18,9 @@ function Contact() {
           <label>Message</label>
           <textarea rows={5}></textarea>
         </div>
-        <button type="submit">Send</button>
       </form>
+      
+      <button type="submit">Send</button>
 		</div>
 	)
 }
