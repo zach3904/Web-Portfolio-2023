@@ -16,12 +16,14 @@ function Input({
 }: Props) {
   return (
     <div className={styles.inputContainer}>
-      {label && <label>{label}</label>}
       <input
         type={type}
         value={value}
+        className={styles.input}
         onChange={(e: BaseSyntheticEvent) => updateFn(e.currentTarget.value)}
+        placeholder=" "
       />
+      {label && <label className={styles.label}>{label}</label>}
     </div>
   )
 }

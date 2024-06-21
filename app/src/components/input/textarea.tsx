@@ -16,13 +16,15 @@ function Textarea({
 }: Props) {
   return (
     <div className={styles.inputContainer}>
-      {label && <label>{label}</label>}
       <textarea
         rows={rows}
+        className={styles.textarea}
         onChange={(e: BaseSyntheticEvent) => updateFn(e.currentTarget.value)}
+        placeholder=" "
       >
         {value}
       </textarea>
+      {label && <label className={styles.label}>{label}</label>}
     </div>
   )
 }

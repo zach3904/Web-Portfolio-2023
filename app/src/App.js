@@ -1,6 +1,6 @@
 import styles from './App.module.css'
 import { useState } from 'react'
-import {Work, About, Contact} from './pages'
+import {Work, About, Experience} from './pages'
 import clsx from 'clsx'
 import LinkedInIcon from './components/icons/linkedin-icon'
 import GithubIcon from './components/icons/github-icon'
@@ -9,7 +9,7 @@ import CameraIcon from './components/icons/camera-icon'
 const PAGES = {
   work: Work,
   about: About,
-  contact: Contact
+  experience: Experience
 }
 
 function App() {
@@ -48,17 +48,17 @@ function App() {
           </ul>
           <div className={styles.secondaryLinks}>
             <div className={styles.secondaryLinkContainer}>
-              <a href="http://www.linkedin.com/in/zachary-richards-94a04720">
+              <a href="http://www.linkedin.com/in/zachary-richards-94a04720" title="LinkedIn">
                 <LinkedInIcon />
               </a>
             </div>
             <div className={styles.secondaryLinkContainer}>
-              <a href="https://github.com/zach3904/Web-Portfolio-2023" target="_blank">
+              <a href="https://github.com/zach3904/Web-Portfolio-2023" target="_blank" title="Portfolio Github">
                 <GithubIcon />
               </a>
             </div>
             <div className={styles.secondaryLinkContainer}>
-              <a href="http://zrichards.photography" target="_blank">
+              <a href="http://zrichards.photography" target="_blank" title="ZRichards Photography">
                 <CameraIcon />
               </a>
             </div>

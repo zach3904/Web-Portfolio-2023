@@ -80,6 +80,9 @@
   display: inline-block;
   transition: var(--transition-default);
 }
+.secondaryLinks a svg {
+  pointer-events: none;
+}
 .secondaryLinks a:hover {
   color: var(--color-primary);
 }

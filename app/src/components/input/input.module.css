@@ -1,6 +1,48 @@
 .inputContainer {
+  position: relative;
   width: 100%;
+  border: 1px solid var(--color-gray2);
+  padding: 8px 8px 6px 8px;
+  width: 100%;
+  transition: all 0.2s;
 }
-.inputContainer label {
-  font-size: 1.2rem;
+.inputContainer:has(> .input:focus) {
+  background-color: var(--color-gray4);
+  border-color: transparent;
+}
+.label {
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+}
+.input,
+.textarea {
+  font-family: 'Poppins', sans-serif;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+.input:focus,
+.textarea:focus {
+  outline: none;
+  color: var(--color-primary);
+}
+.input:focus + label,
+.textarea:focus + label,
+.input:not(:placeholder-shown) + label,
+.textarea:not(:placeholder-shown) + label {
+  color: var(--color-gray1);
+  font-size: 1rem;
+  top: 0;
+}
+.input:not(:placeholder-shown) + label,
+.textarea:not(:placeholder-shown) + label {
+  color: var(--color-gray4);
 }

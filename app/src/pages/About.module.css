@@ -34,7 +34,10 @@
 }
 .form {
   min-width: 320px;
-  width: 50%;
+  width: 40%;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 960px) {
