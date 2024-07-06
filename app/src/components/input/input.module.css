@@ -36,9 +36,18 @@
 }
 .input:focus + label,
 .textarea:focus + label,
+.input:focus:not(:placeholder-shown) + label,
+.textarea:focus:not(:placeholder-shown) + label {
+  color: var(--color-gray1);
+}
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--color-gray2);
+}
+.input:focus + label,
+.textarea:focus + label,
 .input:not(:placeholder-shown) + label,
 .textarea:not(:placeholder-shown) + label {
-  color: var(--color-gray1);
   font-size: 1rem;
   top: 0;
 }
