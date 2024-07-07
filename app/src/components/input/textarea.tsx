@@ -1,5 +1,6 @@
 import { BaseSyntheticEvent } from 'react'
 import styles from './input.module.css'
+import clsx from 'clsx'
 
 type Props = {
   label: string
@@ -14,11 +15,13 @@ function Textarea({
   updateFn,
   rows=5
 }: Props) {
+  const textareaClasses = clsx([styles.input, styles.textarea])
+  
   return (
     <div className={styles.inputContainer}>
       <textarea
         rows={rows}
-        className={styles.textarea}
+        className={textareaClasses}
         onChange={(e: BaseSyntheticEvent) => updateFn(e.currentTarget.value)}
         placeholder=" "
       >
