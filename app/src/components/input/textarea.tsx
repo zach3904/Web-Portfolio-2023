@@ -27,9 +27,8 @@ function Textarea({
         onChange={(e: BaseSyntheticEvent) => updateFn(e.currentTarget.value)}
         placeholder=" "
         name={name}
-      >
-        {value}
-      </textarea>
+        value={value}
+      />
       {label && <label className={styles.label}>{label}</label>}
     </div>
   )
