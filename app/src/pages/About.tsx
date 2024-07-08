@@ -1,17 +1,29 @@
-import { BaseSyntheticEvent, useState } from 'react'
+import { BaseSyntheticEvent, useState, useRef } from 'react'
 import styles from './About.module.css'
 import Input from '../components/input/input'
 import Textarea from '../components/input/textarea'
+import emailjs from '@emailjs/browser'
 
 function About() {
-
   const [nameValue, setNameValue] = useState('')
   const [emailValue, setEmailValue] = useState('')
   const [messageValue, setMessageValue] = useState('')
+  const form = useRef()
   
   const handleContactSubmit = (e: BaseSyntheticEvent) => {
     e.preventDefault()
-    console.log(nameValue, emailValue, messageValue)
+
+    emailjs.sendForm('service_yu7ipj6', 'template_4jwzxe9', form.current, {
+      publicKey: 'AN5jrfrN0qdipV6Mq'
+    })
+    .then(
+      () => {
+        console.log('SUCCESS!');
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      },
+    );
   }
   
 	return (
@@ -24,11 +36,11 @@ function About() {
 				<img src="/images/self-portrait.jpg" className={styles.portrait} alt="Zach Richards portrait" />
 			</div>
       <div className={styles.formContainer}>
-        <form className={styles.form} onSubmit={handleContactSubmit}>
+        <form className={styles.form} ref={form} onSubmit={handleContactSubmit}>
           <h6 className={styles.formHeader}>Contact</h6>
-          <Input label="Name" value={nameValue} updateFn={setNameValue} />
-          <Input label="Email" value={emailValue} updateFn={setEmailValue} />
-          <Textarea label="Message" value={messageValue} updateFn={setMessageValue} />
+          <Input label="Name" name="name" value={nameValue} updateFn={setNameValue} />
+          <Input label="Email" name="email" value={emailValue} updateFn={setEmailValue} />
+          <Textarea label="Message" name="message" value={messageValue} updateFn={setMessageValue} />
           <div style={{textAlign: 'right'}}>
             <button type="submit">Send</button>
           </div>

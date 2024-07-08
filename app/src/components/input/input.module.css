@@ -7,7 +7,7 @@
   transition: all 0.2s;
 }
 .inputContainer:has(> .input:focus) {
-  background-color: var(--color-gray4);
+  background-color: var(--color-gray5);
   border-color: transparent;
   box-shadow: 4px 5px 0 var(--color-primary);
   transform: translate(-3px, -4px);
@@ -49,5 +49,5 @@
   top: 2px;
 }
 .input:not(:placeholder-shown) + label {
-  color: var(--color-gray4);
+  color: var(--color-gray3);
 }

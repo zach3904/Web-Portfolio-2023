@@ -5,10 +5,16 @@
   --color-secondary: #1985A1;
   --color-gray1: #fbfbfb;
   --color-gray2: #C5C3C6;
-  --color-gray3: #46494C;
-  --color-gray4: #2C3639;
+  --color-gray3: #81868a;
+  --color-gray4: #46494C;
+  --color-gray5: #2C3639;
 
   --transition-default: all 0.25s;
+}
+
+::selection {
+  background-color: var(--color-gray4);
+  color: var(--color-primary);
 }
 
 html {
@@ -63,13 +69,13 @@ button {
   border: none;
   padding: 8px 16px;
   transition: var(--transition-default);
-  background-color: var(--color-gray3);
+  background-color: var(--color-gray4);
   color: var(--color-gray1);
   cursor: pointer;
 }
 button:hover {
   color: white;
-  background-color: var(--color-gray3);
+  background-color: var(--color-gray4);
   box-shadow: 4px 5px 0 var(--color-primary);
   transform: translate(-3px, -4px);
 }

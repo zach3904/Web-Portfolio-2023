@@ -28,7 +28,7 @@
   grid-area: content;
 }
 .bio {
-  color: var(--color-gray3);
+  color: var(--color-gray4);
 }
 .formContainer {
   grid-area: form;

@@ -43,7 +43,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: flex-end;
-  color: var(--color-gray3);
+  color: var(--color-gray4);
   text-decoration: none;
   text-transform: uppercase;
   padding: 4px 8px;
@@ -58,7 +58,7 @@
 }
 .nav li a:hover {
   color: white;
-  background-color: var(--color-gray3);
+  background-color: var(--color-gray4);
   box-shadow: 4px 5px 0 var(--color-primary);
   transform: translate3d(3px, -4px, 0);
 }

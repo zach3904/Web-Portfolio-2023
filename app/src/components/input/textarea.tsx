@@ -7,13 +7,15 @@ type Props = {
   value: string
   updateFn: (value: string) => void
   rows?: number
+  name?: string
 }
 
 function Textarea({
   label,
   value,
   updateFn,
-  rows=5
+  rows=5,
+  name
 }: Props) {
   const textareaClasses = clsx([styles.input, styles.textarea])
   
@@ -24,6 +26,7 @@ function Textarea({
         className={textareaClasses}
         onChange={(e: BaseSyntheticEvent) => updateFn(e.currentTarget.value)}
         placeholder=" "
+        name={name}
       >
         {value}
       </textarea>

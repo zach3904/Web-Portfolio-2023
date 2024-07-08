@@ -22,7 +22,7 @@
   align-items: center;
 }
 .prevNextArrow {
-  color: var(--color-gray3);
+  color: var(--color-gray4);
   height: 28px;
   width: 42px;
   position: relative;

@@ -6,13 +6,15 @@ type Props = {
   value: string
   updateFn: (value: string) => void
   type?: HTMLInputTypeAttribute
+  name?: string
 }
 
 function Input({
   label,
   value,
   type="text",
-  updateFn
+  updateFn,
+  name
 }: Props) {
   return (
     <div className={styles.inputContainer}>
@@ -22,6 +24,7 @@ function Input({
         className={styles.input}
         onChange={(e: BaseSyntheticEvent) => updateFn(e.currentTarget.value)}
         placeholder=" "
+        name={name}
       />
       {label && <label className={styles.label}>{label}</label>}
     </div>
