@@ -18,11 +18,11 @@
   box-shadow: 8px 8px 0 var(--color-primary);
 }
 .title {
-  font-weight: 300;
-  color: black;
+  font-size: clamp(4rem, 3.4vw, 4.8rem);
+  font-weight: 200;
   margin-top: 48px;
   text-align: right;
-  line-height: 6.4rem;
+  line-height: clamp(5rem, 3.4vw, 6.4rem);
 }
 .content {
   grid-area: content;

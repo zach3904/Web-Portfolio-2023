@@ -43,7 +43,7 @@ function About() {
 		<div className={styles.container}>
 			<div className={styles.content}>
 				<h2 className={styles.title}>80% developer.<br/>20% designer.</h2>
-				<p className={styles.bio}>I have a passion for clean, polished designs and well thoughtout, organized code. Well versed in a variety of frontend technologies and frameworks such as React, ES6, and various styling methods (CSS, JSS, CSS Modules, etc). I've been in web development and design for 10+ years and keep things interesting through continual learning. This portfolio itself was built as a learning opportunity of modern CSS techniques. You can learn more about me by viewing my <a href="http://www.linkedin.com/pub/zachary-richards/20/47/94a" target="_blank">LinkedIn profile</a>.</p>
+				<p className={styles.bio}>UI developer/occasional designer with a passion for building solid interfaces that look great while remaining easy to use. Strong attention to detail and effort taken to maintain consistency in both the UI and code. Somewhere in between frontend developer and designer. Experience in building UI libraries to promote consistent use of components and styling.</p>
 			</div>
 			<div className={styles.portraitContainer}>
 				<img src="/images/self-portrait.jpg" className={styles.portrait} alt="Zach Richards portrait" />

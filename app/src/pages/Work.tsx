@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import WorkItem from '../components/work-item/work-item'
+import WorkItem from '../components/work/work-item'
 import styles from './Work.module.css'
 import workContent from '../work-content'
 import { Element, scroller } from 'react-scroll'
