@@ -1,6 +1,6 @@
-export default [
+export const experienceContent = [
   {
-    "company": "OCTO CONSULTING",
+    "company": "IBM/OCTO CONSULTING",
     "role": "UI/UX Engineer",
     "location": "Phoenix, AZ",
     "period": "Jan '20 - Present",
@@ -11,8 +11,8 @@ export default [
     ]
   },
   {
-    "company": "PORCH UI",
-    "role": "Engineer",
+    "company": "PORCH",
+    "role": "UI Engineer",
     "location": "Seattle, WA",
     "period": "May '14 - March '19",
     "responsibilities": [
@@ -54,4 +54,17 @@ export default [
     "location": "Seattle, WA",
     "period": "Apr '10 - Oct '10",
   }
+]
+
+export const educationContent = [
+  {
+    "school": "SKAGIT VALLEY COLLEGE",
+    "degree": "AAUCT & ATA in Web Design",
+    "period": "2003 - 2007",
+  },
+  {
+    "school": "STRATEGY COMPUTERS",
+    "degree": "Web Developer Program",
+    "period": "2009",
+  },
 ]
