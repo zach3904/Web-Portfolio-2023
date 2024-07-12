@@ -1,33 +1,5 @@
 export default [
   {
-    "title": "Octo CX Search",
-    "url": "https://www.octo.us/products/octocx/cxsearch/",
-    "description": "CX Search is a tool for searching and discovering data. This was my initial and primary project while working at Octo. I built most of the UI layout and components. Also maintained a simple component library for the other devs to use. JSS was used for styling and typescript to keep the JS clean.",
-    "imgFolder": "cx-search",
-    "images": [
-      "cx-search-1.jpg",
-      "cx-search-2.jpg",
-      "cx-search-3.jpg",
-      "cx-search-4.jpg",
-      "cx-search-5.jpg",
-      "cx-search-6.jpg",
-      "cx-search-7.jpg",
-      "cx-search-8.jpg",
-      "cx-search-9.jpg",
-      "cx-search-10.jpg",
-      "cx-search-11.jpg",
-      "cx-search-12.jpg",
-    ],
-    "skills": [
-      "React",
-      "Typescript",
-      "Material UI",
-      "JSS",
-      "ES6",
-      "Storybook"
-    ]
-  },
-  {
     "title": "Porch UI Library",
     "url": false,
     "imgFolder": "porch-ui-library",
@@ -71,6 +43,34 @@ export default [
       "Responsive Design",
       "Bootstrap",
       "API"
+    ]
+  },
+  {
+    "title": "Octo CX Search",
+    "url": "https://www.octo.us/products/octocx/cxsearch/",
+    "description": "CX Search is a tool for searching and discovering data. This was my initial and primary project while working at Octo. I built most of the UI layout and components. Also maintained a simple component library for the other devs to use. JSS was used for styling and typescript to keep the JS clean.",
+    "imgFolder": "cx-search",
+    "images": [
+      "cx-search-1.jpg",
+      "cx-search-2.jpg",
+      "cx-search-3.jpg",
+      "cx-search-4.jpg",
+      "cx-search-5.jpg",
+      "cx-search-6.jpg",
+      "cx-search-7.jpg",
+      "cx-search-8.jpg",
+      "cx-search-9.jpg",
+      "cx-search-10.jpg",
+      "cx-search-11.jpg",
+      "cx-search-12.jpg",
+    ],
+    "skills": [
+      "React",
+      "Typescript",
+      "Material UI",
+      "JSS",
+      "ES6",
+      "Storybook"
     ]
   },
   {

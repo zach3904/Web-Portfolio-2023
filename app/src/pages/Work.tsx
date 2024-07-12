@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import WorkItem from '../components/work/work-item'
 import styles from './Work.module.css'
-import workContent from '../work-content'
+import workContent from '../data/work-content'
 import { Element, scroller } from 'react-scroll'
 import clsx from 'clsx'
 import Fade from '../components/animations/fade'
