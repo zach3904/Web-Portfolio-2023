@@ -1,16 +1,35 @@
+.experienceWorkItem {
+  margin-bottom: 32px;
+}
 .company {
   margin: 0;
   line-height: 2.8rem;
+  display: flex;
+  align-items: flex-end;
+}
+.subtitle {
+  line-height: 2rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-left: 8px;
+  letter-spacing: -0.05rem;
 }
 .role {
   margin: 0 0 8px;
-  font-weight: 200;
+  font-weight: 300;
 }
-.dateTime {}
+.period {
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+.location {
+  margin-bottom: 4px;
+  color: var(--color-gray3);
+}
 .responsibilities {
   list-style-type: square;
 }
 .responsibilities li {
   margin-bottom: 4px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }

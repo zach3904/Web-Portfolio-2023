@@ -4,7 +4,7 @@ import { experienceContent, educationContent } from '../data/experience-content'
 
 function Experience() {
   return (
-    <div>
+    <div className={styles.container}>
       {experienceContent.map(item => (
         <ExperienceWorkItem {...item} />
       ))}

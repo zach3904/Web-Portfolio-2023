@@ -1,6 +1,7 @@
 export const experienceContent = [
   {
-    "company": "IBM/OCTO CONSULTING",
+    "company": "IBM",
+    "subtitle": "(formerly Octo Consulting)",
     "role": "UI/UX Engineer",
     "location": "Phoenix, AZ",
     "period": "Jan '20 - Present",
