@@ -52,7 +52,7 @@ function WorkItem({
     >
       <div className={styles.workItem}>
         <h2 className={styles.title}>{title}</h2>
-        <swiper-container navigation="true" pagination="true" ref={swiperRef} className={styles.swiper}>
+        <swiper-container navigation="true" pagination="true" ref={swiperRef}>
           {images.map(image => (
             <swiper-slide>
               <img

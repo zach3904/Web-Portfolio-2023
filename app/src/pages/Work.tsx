@@ -53,7 +53,7 @@ function Work() {
     <>
       <div className={styles.workList}>
         {workContent.map((workItem, i) => (
-          <Element name={workItem.title} key={workItem.title}>
+          <Element name={workItem.title} key={workItem.title} className={styles.workItemContainer}>
             <WorkItem
               {...workItem}
               currentSlide={currentSlide}

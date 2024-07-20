@@ -1,14 +1,16 @@
 .workList {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   padding-right: 24px;
+  /* width: 100%; */
 }
-.workList > div {
+.workItemContainer {
   height: calc(100vh - 64px);
   display: flex;
   align-items: center;
   padding-right: 48px;
+  /* width: 100%; */
 }
 
 .prevNextArrows {

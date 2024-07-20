@@ -1,6 +1,5 @@
 .workItem {
   position: relative;
-  max-width: 800px;
   width: 100%;
 }
 .imgViewer {
@@ -47,6 +46,7 @@ swiper-container {
 }
 swiper-container::part(container) {
   padding-bottom: 32px;
+  width: 100%;
 }
 swiper-container::part(button-prev),
 swiper-container::part(button-next) {

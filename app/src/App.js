@@ -67,7 +67,9 @@ function App() {
       </div>
 
       <div className={contentClasses} onTransitionEnd={() => setCurrentPage(nextPage)}>
-        <CurrentPageComponent />
+        <div className={styles.contentScroller}>
+          <CurrentPageComponent />
+        </div>
       </div>
     </div>
   );

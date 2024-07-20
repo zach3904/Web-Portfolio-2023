@@ -9,10 +9,13 @@
 }
 
 .content {
-  display: flex;
-  justify-content: center;
   transition: opacity 0.2s;
   opacity: 1;
+  position: relative;
+}
+.contentScroller {
+  position: absolute;
+  width: 100%;
 }
 .fadeOut {
   opacity: 0
