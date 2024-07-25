@@ -54,11 +54,13 @@ function WorkItem({
         <h2 className={styles.title}>{title}</h2>
         <swiper-container navigation="true" pagination="true" ref={swiperRef}>
           {images.map(image => (
-            <swiper-slide>
-              <img
-                src={`${process.env.PUBLIC_URL}/images/designs/${imgFolder}/${image}`}
-                alt={title}
-              />
+            <swiper-slide key={image}>
+              <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/designs/${imgFolder}/${image}`}
+                  alt={title}
+                />
+              </div>
             </swiper-slide>
           ))}
         </swiper-container>
