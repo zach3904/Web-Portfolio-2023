@@ -67,7 +67,7 @@ function WorkItem({
         <p className={styles.description}>{description}</p>
         <ul className={styles.skillsList}>
           {skills && skills.map(skill => (
-            <li className={styles.skill}>{skill}</li>
+            <li className={styles.skill} key={skill}>{skill}</li>
           ))}
         </ul>
       </div>
