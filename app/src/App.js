@@ -1,4 +1,5 @@
 import styles from './App.module.css'
+import '../node_modules/@glidejs/glide/dist/css/glide.core.min.css'
 import { useState } from 'react'
 import {Work, About, Experience} from './pages'
 import clsx from 'clsx'
@@ -67,9 +68,7 @@ function App() {
       </div>
 
       <div className={contentClasses} onTransitionEnd={() => setCurrentPage(nextPage)}>
-        <div className={styles.contentScroller}>
-          <CurrentPageComponent />
-        </div>
+        <CurrentPageComponent />
       </div>
     </div>
   );

@@ -3,14 +3,15 @@
   flex-direction: column;
   align-items: center; */
   padding-right: 24px;
-  /* width: 100%; */
+  width: 100%;
 }
 .workItemContainer {
   height: calc(100vh - 64px);
   display: flex;
   align-items: center;
   padding-right: 48px;
-  /* width: 100%; */
+  width: 100%;
+  position: relative;
 }
 
 .prevNextArrows {

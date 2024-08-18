@@ -1,5 +1,6 @@
 .workItem {
-  position: relative;
+  position: absolute;
+  padding-right: 48px;
   width: 100%;
 }
 .imgViewer {
@@ -8,7 +9,7 @@
 .title {
   position: absolute;
   bottom: 100%;
-  left: 100%;
+  left: calc(100% - 48px);
   margin: 0;
   font-weight: 200;
   transform: rotate(90deg);

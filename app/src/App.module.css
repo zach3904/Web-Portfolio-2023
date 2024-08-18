@@ -13,10 +13,10 @@
   opacity: 1;
   position: relative;
 }
-.contentScroller {
+/* .contentScroller {
   position: absolute;
   width: 100%;
-}
+} */
 .fadeOut {
   opacity: 0
 }
