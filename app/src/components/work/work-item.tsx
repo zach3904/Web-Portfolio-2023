@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import styles from './work-item.module.css'
 import { Waypoint } from 'react-waypoint'
 import Glide from '@glidejs/glide/dist/glide.modular.esm'
-import { keyboard } from '@testing-library/user-event/dist/keyboard'
 
 type WorkItemProps = {
   imgFolder: string,
@@ -25,33 +24,30 @@ function WorkItem({
   description,
   skills
 }: WorkItemProps) {
-  // const swiperRef = useRef(null)
-  // const [glide, setGlide] = React.useState(null)
-  let glide = null
-
-  // useEffect(() => {
-  //   const handleChangeProjectSlide = event => {
-  //     if (event.key === 'ArrowRight') {
-  //       glide.go('>')
-  //     } else if (event.key === 'ArrowLeft') {
-  //       glide.go('<')
-  //     }
-  //   }
+  const glide = new Glide(`#glide-${slideNumber}`)
     
-  //   if (slideNumber === currentSlide) {
-  //     window.addEventListener('keydown', handleChangeProjectSlide)}
-
-  //   return () => {
-  //     window.removeEventListener('keydown', handleChangeProjectSlide)
-  //   }
-  // }, [currentSlide])
-
+  const handleChangeProjectSlide = event => {
+    if (event.key === 'ArrowRight') {
+      glide.go('>')
+    } else if (event.key === 'ArrowLeft') {
+      glide.go('<')
+    }
+  }
+  
   useEffect(() => {
-    glide = new Glide(`#glide-${slideNumber}`, {
-      keyboard: true
-    }).mount()
-    // setGlide(newGlide)
-  }, [])
+    if (slideNumber === currentSlide) {
+      glide.mount()
+    } else {
+      glide.destroy()
+    }
+    
+    if (slideNumber === currentSlide) {
+      window.addEventListener('keydown', handleChangeProjectSlide)}
+
+    return () => {
+      window.removeEventListener('keydown', handleChangeProjectSlide)
+    }
+  }, [currentSlide])
   
   return (
     <Waypoint
@@ -78,8 +74,8 @@ function WorkItem({
             </ul>
 
             <div className="glide__arrows" data-glide-el="controls">
-              <button className="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-              <button className="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+              <button className="glide__arrow glide__arrow--left">prev</button>
+              <button className="glide__arrow glide__arrow--right">next</button>
             </div>
           </div>
         </div>
