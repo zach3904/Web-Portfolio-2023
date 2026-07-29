@@ -1,0 +1,53 @@
+.inputContainer {
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--color-gray2);
+  padding: 16px 8px 4px 8px;
+  width: 100%;
+  transition: all 0.2s;
+}
+.inputContainer:has(> .input:focus) {
+  background-color: var(--color-gray5);
+  border-color: transparent;
+  box-shadow: 4px 5px 0 var(--color-primary);
+  transform: translate(-3px, -4px);
+}
+.label {
+  position: absolute;
+  left: 8px;
+  top: 13px;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+  transition: all 0.15s;
+}
+.input {
+  font-family: 'Poppins', sans-serif;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+.input:focus {
+  outline: none;
+  color: var(--color-primary);
+}
+.input:focus + label,
+.input:focus:not(:placeholder-shown) + label {
+  color: var(--color-gray1);
+}
+.input::placeholder {
+  color: var(--color-gray2);
+}
+.input:focus + label,
+.input:not(:placeholder-shown) + label {
+  font-size: 1rem;
+  top: 2px;
+}
+.input:not(:placeholder-shown) + label {
+  color: var(--color-gray3);
+}

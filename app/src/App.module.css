@@ -1,0 +1,91 @@
+.app {
+  height: calc(100vh - 64px);
+  inset: 32px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-gap: 64px;
+  max-width: 1600px;
+}
+
+.content {
+  transition: opacity 0.2s;
+  opacity: 1;
+  position: relative;
+}
+/* .contentScroller {
+  position: absolute;
+  width: 100%;
+} */
+.fadeOut {
+  opacity: 0
+}
+
+.sidebarContainer {
+  position: sticky;
+  top: 32px;
+}
+
+.mainHeader {
+  font-size: 4rem;
+  line-height: 90%;
+  font-weight: 700;
+  letter-spacing: -0.3rem;
+  text-align: right;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 24px 0 0;
+  padding: 0;
+}
+.nav li {
+  text-align: right;
+}
+.nav li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--color-gray4);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  font-weight: 500;
+  transition: var(--transition-default);
+  box-shadow: 0 0 0 transparent;
+  transform: translateX(8px);
+}
+.nav li a,
+.nav li a .icon {
+  font-size: 1.8rem;
+}
+.nav li a:hover {
+  color: white;
+  background-color: var(--color-gray4);
+  box-shadow: 4px 5px 0 var(--color-primary);
+  transform: translate3d(3px, -4px, 0);
+}
+
+.secondaryLinks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 24px;
+}
+.secondaryLinkContainer {
+  flex: 1;
+  text-align: right;
+}
+.secondaryLinks a {
+  color: var(--color-gray2);
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  transition: var(--transition-default);
+}
+.secondaryLinks a svg {
+  pointer-events: none;
+}
+.secondaryLinks a:hover {
+  color: var(--color-primary);
+}

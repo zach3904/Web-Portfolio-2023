@@ -1,0 +1,60 @@
+.workItem {
+  position: absolute;
+  padding-right: 48px;
+  width: 100%;
+}
+.imgViewer {
+  box-shadow: 0px 0px 80px -16px rgba(0,0,0,0.15);
+}
+.title {
+  position: absolute;
+  bottom: 100%;
+  left: calc(100% - 48px);
+  margin: 0;
+  font-weight: 200;
+  transform: rotate(90deg);
+  transform-origin: left bottom;
+  width: max-content;
+}
+.description {
+  font-size: 1.4rem;
+  margin-top: 24px;
+}
+.skillsList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 4px;
+}
+.skill {
+  font-size: 1rem;
+  color: white;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  background-color: var(--color-gray4);
+  box-shadow: 4px 4px 0 var(--color-primary);
+}
+
+swiper-container {
+  --swiper-theme-color: var(--color-secondary);
+  --swiper-navigation-size: 20px;
+  --swiper-pagination-bottom: 0px;
+  --swiper-pagination-bullet-width: 4px;
+  --swiper-pagination-bullet-height: 4px;
+  --swiper-pagination-bullet-horizontal-gap: 2px;
+  --swiper-pagination-bullet-border-radius: 0;
+}
+swiper-container::part(container) {
+  padding-bottom: 32px;
+  width: 100%;
+}
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  margin-top: calc(0px - var(--swiper-navigation-size));
+  top: 100%;
+  z-index: 11;
+}
+swiper-container::part(pagination) {
+  height: 24px;
+}
