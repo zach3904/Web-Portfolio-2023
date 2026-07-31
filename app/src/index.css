@@ -25,7 +25,10 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--color-gray1);
+  background: #dae1e8;
+  background: radial-gradient(circle,rgba(223, 226, 232, 1) 0%, rgba(253, 253, 253, 1) 90%);
+  background-attachment: fixed;
+  height: 100vh;
 }
 
 * {
