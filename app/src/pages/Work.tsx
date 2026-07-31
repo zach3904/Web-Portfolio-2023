@@ -25,7 +25,7 @@ function Work() {
       scroller.scrollTo(workContent[nextSlide].title, {
         smooth: 'easeInOutQuint',
         delay: 15,
-        // offset: -32,
+        offset: -32,
         duration: 150
       })
     }

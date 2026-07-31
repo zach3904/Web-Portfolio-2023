@@ -42,7 +42,8 @@ function WorkItem({
     }
     
     if (slideNumber === currentSlide) {
-      window.addEventListener('keydown', handleChangeProjectSlide)}
+      window.addEventListener('keydown', handleChangeProjectSlide)
+    }
 
     return () => {
       window.removeEventListener('keydown', handleChangeProjectSlide)
@@ -64,7 +65,7 @@ function WorkItem({
           <div data-glide-el="track" className="glide__track">
             <ul className="glide__slides">
               {images.map(image => (
-                <li className="glide__slide" key={image}>
+                <li className="glide__slide" key={image} style={{display: 'flex', justifyContent: 'center'}}>
                   <img
                     src={`${process.env.PUBLIC_URL}/images/designs/${imgFolder}/${image}`}
                     alt={title}
@@ -73,10 +74,12 @@ function WorkItem({
               ))}
             </ul>
 
-            <div className="glide__arrows" data-glide-el="controls">
-              <button className="glide__arrow glide__arrow--left">prev</button>
-              <button className="glide__arrow glide__arrow--right">next</button>
-            </div>
+            {images.length > 1 && (  
+              <div className={styles.carouselControls}>
+                <button onClick={() => glide.go('<')}>prev</button>
+                <button onClick={() => glide.go('>')}>next</button>
+              </div>
+            )}
           </div>
         </div>
         <p className={styles.description}>{description}</p>

@@ -5,13 +5,16 @@
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-gap: 64px;
-  max-width: 1600px;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .content {
   transition: opacity 0.2s;
   opacity: 1;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 /* .contentScroller {
   position: absolute;

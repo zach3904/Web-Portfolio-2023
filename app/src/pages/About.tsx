@@ -46,7 +46,7 @@ function About() {
 				<p className={styles.bio}>UI developer/occasional designer with a passion for building solid interfaces that look great while remaining easy to use. Strong attention to detail and effort taken to maintain consistency in both the UI and code. Somewhere in between frontend developer and designer. Experience in building UI libraries to promote consistent use of components and styling.</p>
 			</div>
 			<div className={styles.portraitContainer}>
-				<img src="/images/self-portrait.jpg" className={styles.portrait} alt="Zach Richards portrait" />
+				<img src={`${process.env.PUBLIC_URL}/images/self-portrait.jpg`} className={styles.portrait} alt="Zach Richards portrait" />
 			</div>
       <div className={styles.formContainer}>
         <form className={styles.form} ref={form} onSubmit={handleContactSubmit}>

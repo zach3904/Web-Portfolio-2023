@@ -1,9 +1,7 @@
 .workList {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   padding-right: 24px;
   width: 100%;
+  max-width: 960px;
 }
 .workItemContainer {
   height: calc(100vh - 64px);

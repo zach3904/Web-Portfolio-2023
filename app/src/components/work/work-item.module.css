@@ -35,6 +35,12 @@
   background-color: var(--color-gray4);
   box-shadow: 4px 4px 0 var(--color-primary);
 }
+.carouselControls {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+}
 
 swiper-container {
   --swiper-theme-color: var(--color-secondary);
